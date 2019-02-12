@@ -1,8 +1,4 @@
 module ScreenModels
-  def self.element(ref, locator)
-    View.new(ref, locator)
-  end
-
   class View
     def initialize(ref, accessibility_id)
       @ref = ref
