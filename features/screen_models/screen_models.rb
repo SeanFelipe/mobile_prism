@@ -4,23 +4,23 @@ module ScreenModels
   end
 
   class Element
-    def initialize(ref, locator)
+    def initialize(ref, accessibility_id)
       @ref = ref
-      @locator = locator
+      @locator = accessibility_id
     end
 
     def click
-      $driver.find_element(:class_name, @locator).click
+      $driver.find_element(:accessibility_id, @locator).click
     end
 
     def text
-      $driver.find_element(:class_name, @locator).text
+      $driver.find_element(:accessibility_id, @locator).text
     end
   end
 end
 
-$mario = ScreenModels.element :mario, 'android.widget.ImageView'
-$score = ScreenModels.element :score, 'android.widget.TextView'
+$mario = ScreenModels.element :mario, 'mario_small'
+$score = ScreenModels.element :score, 'score'
 
 
 
