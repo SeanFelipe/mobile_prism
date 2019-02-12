@@ -1,9 +1,9 @@
 module ScreenModels
   def self.element(ref, locator)
-    Element.new(ref, locator)
+    View.new(ref, locator)
   end
 
-  class Element
+  class View
     def initialize(ref, accessibility_id)
       @ref = ref
       @locator = accessibility_id
@@ -17,12 +17,15 @@ module ScreenModels
       $driver.find_element(:accessibility_id, @locator).text
     end
   end
+
+  class Screen
+    def self.element(element_name, locator)
+      class_eval <<-CODE
+        @@#{element_name} = View.new(element_name, locator)
+          def self.#{element_name}
+          @@#{element_name}
+        end
+      CODE
+    end
+  end
 end
-
-$mario = ScreenModels.element :mario, 'mario_small'
-$score = ScreenModels.element :score, 'score'
-
-
-
-
-

@@ -3,6 +3,7 @@ require 'rspec'
 require 'rspec/expectations'
 require 'byebug'; alias :breakpoint :byebug
 require_relative '../screen_models/screen_models'
+require_relative '../screen_models/mario_models'
 
 desired_caps = {
   caps:       {
