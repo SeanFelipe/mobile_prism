@@ -1,5 +1,4 @@
 module ScreenModels
-
   def self.element(ref, locator)
     Element.new(ref, locator)
   end
@@ -18,7 +17,6 @@ module ScreenModels
       $driver.find_element(:class_name, @locator).text
     end
   end
-
 end
 
 $mario = ScreenModels.element :mario, 'android.widget.ImageView'
