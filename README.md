@@ -1,5 +1,9 @@
 #### Appium demo with (sort of) Super Mario
 
+<p align="center">
+  <img src="https://github.com/SeanFelipe/Appiumario/raw/master/gif/appiumario.gif">
+</p>
+
 
 A little Appium stack in Ruby made to run against this demo app: [SuperMarioDroid](https://github.com/SeanFelipe/SuperMarioDroid)
 
