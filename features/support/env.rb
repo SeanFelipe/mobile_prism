@@ -4,8 +4,6 @@ require 'rspec/expectations'
 require 'byebug'; alias :breakpoint :byebug
 require_relative '../screen_models/screen_models'
 
-#RSpec.configure
-
 desired_caps = {
   caps:       {
     #appiumVersion:    '1.4.16',
