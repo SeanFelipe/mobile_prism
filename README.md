@@ -3,9 +3,7 @@
 
 A little Appium stack in Ruby made to run against this demo app: [SuperMarioDroid](https://github.com/SeanFelipe/SuperMarioDroid)
 
-Doing a bit of magic screen models underneath the hood which you can look at [here](https://github.com/SeanFelipe/Appiumario/blob/master/features/screen_models/screen_models.rb)
-
-Using the magic looks like this:
+Doing a bit of magic screen models underneath the hood which you can look at [here](https://github.com/SeanFelipe/Appiumario/blob/master/features/screen_models/screen_models.rb). Using the magic looks like this:
 ```
 When("I click Mario") do
   $mario.click
