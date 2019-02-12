@@ -2,6 +2,7 @@ require 'appium_lib'
 require 'rspec'
 require 'rspec/expectations'
 require 'byebug'; alias :breakpoint :byebug
+require_relative '../screen_models/screen_models'
 
 #RSpec.configure
 

@@ -5,5 +5,5 @@ Feature: Test scoring system
     When I click Mario
     Then the score increases to "1" within "1" seconds
     When I click Mario again
-    Then the score increases to "1" within "1" seconds
+    Then the score increases to "2" within "1" seconds
     #Then I debug for a while
