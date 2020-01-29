@@ -5,6 +5,10 @@ require 'byebug'; alias :breakpoint :byebug
 require_relative '../screen_models/screen_models'
 require_relative '../screen_models/mario_models'
 
+unless ENV.has_key? 'APPIUM_APK'
+  raise RuntimeError, 'please define $APPIUM_APK'
+end
+
 desired_caps = {
   caps:       {
     #appiumVersion:    '1.4.16',

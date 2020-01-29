@@ -1,4 +1,4 @@
-def all
+def fall
   $driver.find_elements(:xpath, "//*")
 end
 

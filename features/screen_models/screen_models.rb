@@ -12,6 +12,19 @@ module ScreenModels
     def text
       $driver.find_element(:accessibility_id, @locator).text
     end
+
+    def wait_for
+      puts "waiting for #{@locator}"
+      10.times do |ii|
+        begin
+          $driver.find_element(:accessibility_id, @locator)
+          break
+        rescue
+          puts "#{@locator} not found, #{ii} of 10..."
+          sleep 1
+        end
+      end
+    end
   end
 
   class Screen

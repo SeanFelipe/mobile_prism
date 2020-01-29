@@ -1,5 +1,9 @@
 Feature: Test scoring system
 
+  Background:
+    Given the Start Screen appears
+    Given I click on the mushroom
+
   Scenario: When Mario is clicked score should increase
     Given the score begins at "0"
     When I click Mario
