@@ -1,5 +1,6 @@
 original.android/
 *.swp
+*.swo
 vendor.cache.js
 
 

@@ -1,8 +1,8 @@
-def fall
+def alle
   $driver.find_elements(:xpath, "//*")
 end
 
-def aid
-  $driver.find_elements(:accessibility_id, aid)
+def fa(aid)
+  $driver.find_elements(:accessibility_id, )
 end
 
