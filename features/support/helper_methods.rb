@@ -2,6 +2,7 @@ def rreload
   files = [
     './features/support/helper_methods.rb',
     './features/step_definitions/kickstarter_steps.rb',
+    './features/screen_models/kickstarter_models.rb',
   ]
   files.each {|ff| load ff}
 end
@@ -21,8 +22,8 @@ end
 
 def allcn
   els = alle
-  els.each {|el| print "#{el.className}\n"}
-  puts
+  $allcn = els
+ llt els.each {|el| print "#{el.className}\n"}
 end
 
 def fa(aid)

@@ -14,7 +14,7 @@ desired_caps = {
     #appiumVersion:    '1.4.16',
     platformName:     'Android',
     #platformVersion:  '4.4',
-    newCommandTimeout: 1200,
+    newCommandTimeout: 1800,
     automationName:       'UIAutomator2',
     deviceName:       'Nexus_5X_API_27',
     app:              ENV['APPIUM_APK'],

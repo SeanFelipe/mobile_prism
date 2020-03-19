@@ -1,26 +1,35 @@
 module ScreenModels
   class View
-    def initialize(ref, accessibility_id)
-      @ref = ref
-      @locator = accessibility_id
+    def initialize(name, data)
+      @name = name
+      @text = data.gsub('a|','')
+      @view_type = 'android.widget.TextView'
+    end
+
+    def locator
+      "//#{@view_type}[@text='#{@text}']"
+    end
+
+    def finde
+      $driver.find_element(:xpath, locator)
     end
 
     def click
-      $driver.find_element(:accessibility_id, @locator).click
+      finde.click
     end
 
     def text
-      $driver.find_element(:accessibility_id, @locator).text
+      finde.text
     end
 
     def wait_for
-      puts "waiting for #{@locator}"
+      puts "waiting for #{@view_type} #{@text}"
       10.times do |ii|
         begin
-          $driver.find_element(:accessibility_id, @locator)
+          finde
           break
         rescue
-          puts "#{@locator} not found, #{ii} of 10..."
+          puts "#{@view_type} #{@text} not found, #{ii} of 10..."
           sleep 1
         end
       end
@@ -29,6 +38,7 @@ module ScreenModels
 
   class Screen
     def self.element(element_name, locator)
+      # class method equivalent of instance method metaprogramming
       class_eval <<-CODE
         @@#{element_name} = View.new(element_name, locator)
           def self.#{element_name}
