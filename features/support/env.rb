@@ -21,5 +21,5 @@ desired_caps = {
   }
 }
 
-$driver = Appium::Driver.new(desired_caps).start_driver
+$driver = Appium::Driver.new(desired_caps)
 $driver.start_driver
