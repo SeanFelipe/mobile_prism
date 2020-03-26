@@ -1,21 +1,38 @@
-When("I boot up and grab all elements") do
-  Kernel.puts 'begin step'
-=begin
-  elems = alle
-
-  sleep 1
-  elems = alle
-  #elems = $driver.find_elements(:class_name, "android.widget.TextView")
-  #elems = $driver.find_elements(:class_name, "android.widget.TextView")
-  texts = elems.select {|el| el.label != nil}
-  texts.each {|el| print "#{el.label}: #{el.text}\n" }
-
-=end
-
-
-  elems = alle
-  Kernel.puts 'elems complete'
-
+When("I launch the app") do
   breakpoint
-  puts
+end
+
+When("I select Sign up or Log in") do
+  AlphaScreen.sign_up_or_log_in.click
+end
+
+And("I select Sign up on the Sign up or Log in screen") do
+  SignupOrLogin.sign_up.click
+end
+
+When("I enter name {string} with a unique timestamp") do |string|
+  @timestamp = Time.now.to_i
+  Signup.name.click
+  Signup.name.set "#{string}-#{@timestamp}"
+end
+
+When("I enter email {string} plus the unique timestamp") do |string|
+  em = string.split('@')
+  un = em.first + "-#{@timestamp}@"
+  unique_email = un + em.last
+  Signup.email.click
+  Signup.email.set unique_email
+end
+
+When("I enter password {string}") do |string|
+  Signup.password.click
+  Signup.password.set string
+end
+
+When("I click go") do
+  Numpad.go.click
+end
+
+Then("I see the message {string}") do |string|
+  breakpoint
 end
