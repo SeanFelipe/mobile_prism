@@ -62,7 +62,7 @@ end
 
 Test executions:
 
-```ruby
+```cucumber
 Feature: Signup tests
 
   Scenario: Create a new user account
@@ -89,5 +89,14 @@ When("I enter name {string} with a unique timestamp") do |string|
   @timestamp = Time.now.to_i
   Signup.name.click
   Signup.name.set "#{string}-#{@timestamp}"
+end
+
+When("I enter password {string}") do |string|
+  Signup.password.click
+  Signup.password.set string
+end
+
+When("I click go") do
+  Numpad.go.click
 end
 ```
