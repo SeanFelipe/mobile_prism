@@ -37,7 +37,7 @@ end
 More recently, I'm using the Kickstarter [mobile](https://github.com/kickstarter/ios-oss) [app](https://github.com/kickstarter/android-oss), which Kickstarter has been gracious enough to open source. :) Yay ! Thank you Kickstarter !
 
 <p align="center">
-  <img src="https://github.com/SeanFelipe/mobile_prism/raw/master/img/kickstarter_alpha.png">
+  <img src="https://github.com/SeanFelipe/mobile_prism/raw/master/img/kickstarter.png">
 </p>
 
 ```ruby
