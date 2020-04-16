@@ -63,6 +63,20 @@ end
 Test executions:
 
 ```ruby
+Feature: Signup tests
+
+  Scenario: Create a new user account
+    Given I launch the app
+    When I select Sign up or Log in
+    And I select Sign up on the Sign up or Log in screen
+    And I enter name "Mobile Prism" with a unique timestamp
+    And I enter email "mobileprism@addlightness.tech" plus the unique timestamp
+    And I enter password "mobileprism"
+    And I click go
+    Then I see the message "Welcome!"
+```
+
+```ruby
 When("I select Sign up or Log in") do
   AlphaScreen.sign_up_or_log_in.click
 end
