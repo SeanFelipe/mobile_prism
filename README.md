@@ -16,7 +16,7 @@ Here's a simple implementation with Super Mario:
 
 Here's code from a Kickstarter implementation:
 
-```
+```ruby
 class AlphaScreen < ScreenModels::Screen
   element :magic, 'a:MAGIC', 'i:Magic'
   element :popular, 'a:POPULAR', 'i:Popular'
@@ -35,7 +35,7 @@ end
 
 Using Cucumber, test code looks like this:
 
-```
+```ruby
 When("I select Sign up or Log in") do
   AlphaScreen.sign_up_or_log_in.click
 end
