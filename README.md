@@ -7,14 +7,38 @@ For demonstration purposes, I'm using the Kickstarter [mobile](https://github.co
 
 Site Prism's `element` method, adapted to support iOS and Android in a one-line declaration
 
-Here's a simple implementation with Super Mario:
+Here's an earlier implementation with Super Mario:
+
+```ruby
+class GameScreen < ScreenModels::Screen
+  element :mario, 'mario_small'
+  element :score, 'score'
+end
+```
+
+Step definitions:
+
+```ruby
+Given("the score begins at {string}") do |string|
+  GameScreen.score.text.should eq "0"
+end
+
+When("I click Mario") do
+  GameScreen.mario.click
+end
+
+Then("the score increases to {string} within {string} seconds") do |expected_score, seconds|
+  sleep seconds.to_i + 0.5
+  GameScreen.score.text.should eq expected_score
+end
+```
 
 <p align="center">
   <img src="https://github.com/SeanFelipe/mobile_prism/raw/master/img/appiumario.gif">
 </p>
 
 
-Here's code from a Kickstarter implementation:
+Here's more recent code from a Kickstarter implementation:
 
 ```ruby
 class AlphaScreen < ScreenModels::Screen
@@ -33,7 +57,7 @@ class NavBar < ScreenModels::Screen
 end
 ```
 
-Using Cucumber, test code looks like this:
+Test executions:
 
 ```ruby
 When("I select Sign up or Log in") do
@@ -48,22 +72,5 @@ When("I enter name {string} with a unique timestamp") do |string|
   @timestamp = Time.now.to_i
   Signup.name.click
   Signup.name.set "#{string}-#{@timestamp}"
-end
-
-When("I enter email {string} plus the unique timestamp") do |string|
-  em = string.split('@')
-  un = em.first + "-#{@timestamp}@"
-  unique_email = un + em.last
-  Signup.email.click
-  Signup.email.set unique_email
-end
-
-When("I enter password {string}") do |string|
-  Signup.password.click
-  Signup.password.set string
-end
-
-When("I click go") do
-  Numpad.go.click
 end
 ```
