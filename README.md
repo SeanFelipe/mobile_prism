@@ -36,9 +36,12 @@ end
 
 More recently, I'm using the Kickstarter [mobile](https://github.com/kickstarter/ios-oss) [app](https://github.com/kickstarter/android-oss), which Kickstarter has been gracious enough to open source. :) Yay ! Thank you Kickstarter !
 
-<p align="center">
-  <img src="https://github.com/SeanFelipe/mobile_prism/raw/master/img/kickstarter.png">
-</p>
+<div align="center">
+  <div style="display: flex; flex-direction: column">
+    <img src="https://github.com/SeanFelipe/mobile_prism/raw/master/img/kickstarter.png">
+    <img src="https://github.com/SeanFelipe/mobile_prism/raw/master/img/kickstarter_android.png">
+  </div>
+</div>
 
 ```ruby
 class AlphaScreen < ScreenModels::Screen
