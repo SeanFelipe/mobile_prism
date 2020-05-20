@@ -5,4 +5,5 @@ title run-Appiumario
 export APP_PATH=$HOME/Library/Developer/Xcode/DerivedData/Kickstarter-aovyxhvbmbzyhcawmshkorehcdqb/Build/Products/Debug-iphonesimulator/KickDebug.app
 export APPIUM_APK=$APP_PATH
 
-cucumber features/Kickstarter/SignupTests.feature
+#cucumber features/Kickstarter/SignupTests.feature
+cucumber features/Kickstarter/Demo.feature
