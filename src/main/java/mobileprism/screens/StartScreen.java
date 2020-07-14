@@ -1,7 +1,7 @@
 package mobileprism.screens;
 
-import mobileprism.templates.Element;
-import mobileprism.templates.PrismScreen;
+import mobileprism.components.Element;
+import mobileprism.components.PrismScreen;
 
 
 public class StartScreen extends PrismScreen {

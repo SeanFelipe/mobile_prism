@@ -1,4 +1,4 @@
-package mobileprism.templates;
+package mobileprism.components;
 
 import mobileprism.config.World;
 

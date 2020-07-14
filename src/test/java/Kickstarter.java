@@ -7,6 +7,9 @@ public class Kickstarter {
     @Test()
     public void helloWorld() {
         System.out.println("Hello World");
-        System.out.println("StartScreen: " + StartScreen.mario().toString());
+    }
+
+    public void startApp() {
+
     }
 }
