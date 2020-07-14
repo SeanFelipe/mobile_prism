@@ -1,4 +1,4 @@
-package mobileprism.config.templates;
+package mobileprism.templates;
 
 import mobileprism.config.World;
 import org.openqa.selenium.By;

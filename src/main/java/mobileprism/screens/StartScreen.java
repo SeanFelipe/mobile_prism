@@ -1,10 +1,10 @@
-package mobileprism.config.screens;
+package mobileprism.screens;
 
-import mobileprism.config.templates.Element;
-import mobileprism.config.templates.PrismScreen;
+import mobileprism.templates.Element;
+import mobileprism.templates.PrismScreen;
 
 
-class StartScreen extends PrismScreen {
+public class StartScreen extends PrismScreen {
     public static Element welcomeMessage() {
         String androidId = "welcome";
         String iosLocator = "";
