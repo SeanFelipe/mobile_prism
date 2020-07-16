@@ -1,15 +1,13 @@
+import mobileprism.screens.StartScreen;
 import org.testng.annotations.Test;
 
-import mobileprism.screens.StartScreen;
+import mobileprism.components.PrismTest;
 
 
-public class Kickstarter {
+public class Kickstarter extends PrismTest {
     @Test()
     public void helloWorld() {
         System.out.println("Hello World");
-    }
-
-    public void startApp() {
-
+        System.out.println("Mushroom: " + StartScreen.mushroom());
     }
 }

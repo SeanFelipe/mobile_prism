@@ -1,5 +1,10 @@
 apply plugin: 'groovy'
 
+def PLATFORM = 'android'
+def DEVICE_NAME = 'MapusMaximus'
+def VERSION = '10'
+def APP_PATH = '/Users/felipe/alsi/SuperMarioDroid/app/build/outputs/apk/debug/app-debug.apk'
+
 repositories {
     mavenCentral()
 }
@@ -15,6 +20,11 @@ dependencies {
 }
 
 test {
+    systemProperty 'deviceName', DEVICE_NAME
+    systemProperty 'platform', PLATFORM
+    systemProperty 'platformVersion', VERSION
+    systemProperty 'app', APP_PATH
+
     // enable TestNG support (default is JUnit)
     useTestNG()
 
